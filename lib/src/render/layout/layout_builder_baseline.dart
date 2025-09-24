@@ -26,6 +26,12 @@ class _RenderLayoutBuilderPreserveBaseline extends RenderBox
         RenderObjectWithLayoutCallbackMixin,
         RenderConstrainedLayoutBuilder<BoxConstraints, RenderBox> {
   @override
+  void runLayoutCallback() => super.runLayoutCallback();
+
+  @override
+  void scheduleLayoutCallback() => super.scheduleLayoutCallback();
+  
+  @override
   double? computeDistanceToActualBaseline(TextBaseline baseline) =>
       child?.getDistanceToActualBaseline(baseline);
 
